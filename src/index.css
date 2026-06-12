@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #264653;
+  --color-brand-secondary: #84A98C;
+  --color-brand-accent: #F4A261;
+  --color-brand-bg: #FAFAF8;
+  --color-brand-text: #1F2937;
+  
+  --font-sans: "Poppins", "Noto Sans Gujarati", system-ui, -apple-system, sans-serif;
+  --font-gujarati: "Noto Sans Gujarati", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbars for clean minimal interfaces */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(38, 70, 83, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(38, 70, 83, 0.4);
+}
+
+/* Viewport structure overrides to create a centered phone frame */
+html, body, #root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ccd8c8; /* Sage green outer background matching screenshot */
+  color: #264653;
+  font-family: "Poppins", "Noto Sans Gujarati", system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base fade animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Neubrutalist / Duolingo style elements */
+.brutalist-border {
+  border: 2px solid #264653;
+}
+
+.brutalist-shadow {
+  box-shadow: 0 4px 0 0 #264653;
+}
+
+.brutalist-shadow-sm {
+  box-shadow: 0 2px 0 0 #264653;
+}
+
+.brutalist-button-active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 #264653;
+}
+
+/* Highlight styling for selected cards */
+.selected-card-glow {
+  background-color: #f0f9f2 !important; /* Pale green fill */
+  border-color: #264653 !important;
+}
+
+/* Focus state override */
+.focus-ring {
+  outline: none;
+  border-color: #F4A261 !important;
+  box-shadow: 0 0 0 2px rgba(244, 162, 97, 0.4);
+}
