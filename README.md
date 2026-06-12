@@ -53,7 +53,7 @@ The platform helps users:
 
 ### Database
 
-* Firebase Firestore (planned)
+* Firebase Firestore 
 
 ## Core Philosophy
 
