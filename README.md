@@ -49,7 +49,7 @@ The platform helps users:
 ### Backend
 
 * FastAPI (planned)
-* Claude API (planned)
+* Gemini API (planned)
 
 ### Database
 
